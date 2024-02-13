@@ -21,7 +21,8 @@
                 HorizontalOptions="Center"
                 BackgroundColor="#32CD32"
                 TextColor="#FFFFFF"
-                FontAttributes="Bold" />
+                FontAttributes="Bold" 
+                Clicked="CriarBancoDeDadosBtn_Clicked"/>
 
             <VerticalStackLayout x:Name="OperacoesVsl">
                 <Entry
@@ -42,27 +43,31 @@
                         Margin="0,0,2,0"
                         BackgroundColor="#32CD32"
                         TextColor="#FFFFFF"
-                        FontAttributes="Bold"/>
+                        FontAttributes="Bold" 
+                        Clicked="InserirBtn_Clicked" />
                     <Button
                         x:Name="AlterarBtn"
                         Text="Alterar"
                         Margin="0,0,2,0"
                         BackgroundColor="#FFA500"
                         TextColor="#FFFFFF"
-                        FontAttributes="Bold"/>
+                        FontAttributes="Bold"
+                        Clicked="AlterarBtn_Clicked" />
                     <Button
                         x:Name="ExcluirBtn"
                         Text="Excluir"
                         Margin="0,0,2,0"
                         BackgroundColor="#FF4500"
                         TextColor="#FFFFFF"
-                        FontAttributes="Bold" />
+                        FontAttributes="Bold" 
+                        Clicked="ExcluirBtn_Clicked" />
                     <Button
                         x:Name="LocalizarBtn"
                         Text="Localizar"
                         BackgroundColor="#8A2BE2"
                         TextColor="#FFFFFF"
-                        FontAttributes="Bold" />
+                        FontAttributes="Bold"
+                        Clicked="LocalizarBtn_Clicked" />
                 </HorizontalStackLayout>
                 <HorizontalStackLayout 
                     HorizontalOptions="Center" 
@@ -73,8 +78,23 @@
                         HorizontalOptions="Center"
                         BackgroundColor="#00BFFF"
                         TextColor="#FFFFFF"
-                        FontAttributes="Bold" />
+                        FontAttributes="Bold" 
+                        Clicked="ListarBtn_Clicked" />
                 </HorizontalStackLayout>
+                <CollectionView x:Name="ListaCv">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="2*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding Id}" />
+                                <Label Grid.Column="1" Text="{Binding Endereco}" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
             </VerticalStackLayout>
         </VerticalStackLayout>
     </ScrollView>
