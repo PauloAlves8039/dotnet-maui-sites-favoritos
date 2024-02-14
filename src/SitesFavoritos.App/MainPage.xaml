@@ -24,7 +24,9 @@
                 FontAttributes="Bold" 
                 Clicked="CriarBancoDeDadosBtn_Clicked"/>
 
-            <VerticalStackLayout x:Name="OperacoesVsl">
+            <VerticalStackLayout 
+                x:Name="OperacoesVsl"
+                IsVisible="false">
                 <Entry
                     x:Name="IdEnt"
                     Keyboard="Numeric"
@@ -89,8 +91,16 @@
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="2*" />
                                 </Grid.ColumnDefinitions>
-                                <Label Text="{Binding Id}" />
-                                <Label Grid.Column="1" Text="{Binding Endereco}" />
+                                <Label Text="{Binding Id}" >
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureAlterarSite" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                                <Label Grid.Column="1" Text="{Binding Endereco}">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnWebsiteLabelTapped" />
+                                    </Label.GestureRecognizers>
+                                </Label>
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>

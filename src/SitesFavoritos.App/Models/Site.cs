@@ -9,6 +9,6 @@ namespace SitesFavoritos.App.Models
         public int Id { get; set; }
 
         [MaxLength(250), Unique]
-        public int Endereco { get; set; }
+        public string Endereco { get; set; }
     }
 }
