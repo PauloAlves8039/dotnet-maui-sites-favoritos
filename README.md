@@ -7,7 +7,17 @@
 
 ## :computer: Projeto
 
-Aplicação mobile para gerenciar um `CRUD` com sites favoritos, o código fonte do projeto foi baseado no curso [.NET MAUI - Desenvolvimento de Aplicativos Desktop e Mobile](https://www.udemy.com/course/desenvolvimento-de-aplicativos-com-net-maui/).
+Aplicação mobile para gerenciar uma lista com sites favoritos, o código fonte do projeto foi baseado no curso [.NET MAUI - Desenvolvimento de Aplicativos Desktop e Mobile](https://www.udemy.com/course/desenvolvimento-de-aplicativos-com-net-maui/).
+
+## :blue_book: Regra de Negócio
+
+Funcionalidade implementadas nessa aplicação:
+
+- Adicionar site.
+- Exibir lista de sites.
+- Selecionar site.
+- Atualizar site.
+- Excluir site.
 
 ## ✔️ Recursos Utilizados
 
@@ -16,11 +26,19 @@ Aplicação mobile para gerenciar um `CRUD` com sites favoritos, o código fonte
 - `C#`
 - `SQLite`
 
+## :white_check_mark: Decisões Técnicas
+
+- Procurei manter a mesma estrutura apresentada no curso.
+- Adicionei uma imagem para representar um banco de dados.
+
 ## :floppy_disk: Clonar Repositório
 
 ```bash
 git clone https://github.com/PauloAlves8039/dotnet-maui-sites-favoritos.git
 ```
+## :camera: Screenshot
+
+<p align="center"> <img src="https://github.com/PauloAlves8039/dotnet-maui-sites-favoritos/blob/master/src/SitesFavoritos.App/Resources/Images/screenshot.png" style="width:400px;" /> </p>
 
 ## :boy: Author
 
